@@ -1,16 +1,105 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
-    <script src="components/loader.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
     <link rel="stylesheet" href="components/loader.css">
+    <script src="components/loader.js"></script>
     <link rel="stylesheet" href="css/style.css">
-    <script>
-    </script>
+    <script src="components/login.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
+        
+        body {
+            font-family: 'Hammersmith One', sans-serif;
+            background-image: url('https://raw.githubusercontent.com/DevJuanzok4/Pinterarvel/master/back.jpg');
+            
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 90%; /* Adjusted for mobile devices */
+            box-sizing: border-box;
+        }
+        
+        .form-container {
+            display: none;
+        }
+        
+        h2 {
+            margin-top: 0;
+            text-align: center;
+            color: #red;
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        label {
+            font-size: 18px; /* Adjusted font size */
+            font-weight: bold;
+            color: #444;
+            margin-bottom: 5px; /* Improved spacing */
+        }
+        
+        input {
+            padding: 10px;
+            margin-bottom: 15px; /* Improved spacing */
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px; /* Adjusted font size */
+        }
+        
+        button {
+            padding: 10px;
+            background-color: #f0141e;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 16px; /* Adjusted font size */
+        }
+        
+        button:hover {
+            background-color: #c00b13;
+        }
+    </style>
 </head>
+
 <body>
-	<h1>Pinterarvel</h1>
+    <div class="container">
+        <h2>Criar Conta / Logar</h2>
+        <form>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" required>
+
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" required>
+
+            <button type="button" onclick="cadastrarConta()">Cadastrar</button>
+            <br>
+            <button type="button" onclick="entrar()">Entrar</button>
+        </form>
+    </div>
+    
 </body>
 </html>
